@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flat Stye | Hospital</title>
+
+    <style>
+
+        :root {
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        html {
+            background-color: #429FD3;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            width: 450px;
+            transform: scale(.8);
+        }
+
+        #building {
+            width: 452px; height: 600px;
+            position: relative;
+            padding: 30px 6px 0 6px;
+            background-color: #FFF;
+            display: grid;
+            grid-template-rows:    repeat(5, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        #building::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100%; height: 20px;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        #cross {
+            width: 150px; height: 150px;
+            background-color: #FFF;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #cross::before {
+            content: '';
+            width: 40px; height: 110px;
+            background: #D63D42;            
+        }
+
+        #cross::after {
+            content: '';
+            position: absolute;
+            width: 110px; height: 40px;
+            background: #D63D42;            
+        }
+
+        #roof {
+            width: 500px; height: 30px;
+            background-color: #FFF;
+            margin-left: -25px;
+        }
+
+        .window {
+            width: 95px; height: 95px;
+            margin: 0 auto;
+            background-color: #429FD3;
+            position: relative;
+        }
+
+        .window::after {
+            content: '';
+            position: absolute;
+            border-top: 95px solid rgba(255, 255, 255, .3);
+            border-left: 95px solid transparent;
+        }
+
+        #door {
+            width: 208px;
+            height: 114px;
+            margin: 0 auto;
+            margin-top: 0px;
+            background: linear-gradient(rgba(0, 0, 0, 0.3) 10%, #DDDDDD 10%);
+            border: solid 12px #555657;
+            border-bottom: unset;
+            position: relative;
+            grid-row: 5 / 5;
+            grid-column: 2 / 4;
+        }
+
+        #door::before {
+            content: '';
+            position: absolute;
+            left: 0; right: 0;
+            width: 12px; height: 100%; 
+            background-color: #555657;
+            margin: auto;
+        }
+
+        #door::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0; top: 40px;
+            width: 40px; height: 23px; 
+            background: linear-gradient(to right, #D63D42 8px, transparent 8px, transparent 32px, #D63D42 32px);
+            margin: auto;
+        }
+
+        #shadow{
+            width: 250px; height: 100%;
+            background-color: rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 0;
+            left: 50%;
+            clip-path: polygon(0 0, 75px 0, 75px 150px, 100% 150px, 100% 180px, 227px 180px, 227px 100%, 0 100%)
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="cross"></div>
+        <div id="roof"></div>
+        <div id="building">
+            <div class="window"></div>
+            <div class="window"></div>
+            <div class="window"></div>
+            <div class="window"></div>
+            <div class="window"></div>
+            <div class="window"></div>
+            <div class="window"></div>
+            <div class="window"></div>
+            <div class="window"></div>
+            <div class="window"></div>
+            <div class="window"></div>
+            <div class="window"></div>
+            <div class="window"></div>
+            <div class="window"></div>
+            <div class="window"></div>
+            <div class="window"></div>
+            <div class="window"></div>
+            <div id="door"></div>
+            <div class="window"></div>
+        </div>
+        <div id="shadow"></div>
+    </main> 
+</body>
+</html>
